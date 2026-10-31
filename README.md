@@ -118,6 +118,25 @@ Die Windrichtung wird als Kreismittel berechnet. Die Regenmenge der Umgebung ist
 kein Mittel der Zählerstände, sondern summiert den mittleren Zuwachs seit dem
 Start des Geräts. `preferred_sensor_id` und `filter_sensor_id` schließen sich aus.
 
+## Beispiel: LILYGO LoRa32 mit OLED
+
+[`examples/lilygo-lora32-oled.yaml`](examples/lilygo-lora32-oled.yaml) zeigt die
+eigene Station und den Mittelwert der Umgebung auf dem 0,96-Zoll-Display. Vor dem
+ersten Start `preferred_sensor_id` durch die eigene ID ersetzen. Die Seiten wechseln
+alle 5 Sekunden. Die Kopfzeile zeigt das Alter des letzten eigenen Pakets, auf der
+Umgebungsseite die Anzahl der gemittelten Stationen. Fehlende Werte erscheinen als `--`.
+
+| Klima | Wind | Regen und Licht |
+| --- | --- | --- |
+| ![Seite Klima](docs/oled/klima.png) | ![Seite Wind](docs/oled/wind.png) | ![Seite Regen und Licht](docs/oled/regen-licht.png) |
+
+| Umgebung | Status |
+| --- | --- |
+| ![Seite Umgebung](docs/oled/umgebung.png) | ![Seite Status](docs/oled/status.png) |
+
+Die Bilder sind mit Beispielwerten gerendert, keine Fotos. Neu erzeugen:
+`python docs/render_oled_pages.py Roboto-Regular.ttf docs/oled`
+
 ## Radio und Pins
 
 Die Pinbezeichnungen `irq` und `gpio` folgen den beiden Signalleitungen, die
