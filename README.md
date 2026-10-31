@@ -123,7 +123,7 @@ Start des Geräts. `preferred_sensor_id` und `filter_sensor_id` schließen sich 
 [`examples/lilygo-lora32-oled.yaml`](examples/lilygo-lora32-oled.yaml) zeigt die
 eigene Station und den Mittelwert der Umgebung auf dem 0,96-Zoll-Display. Vor dem
 ersten Start `preferred_sensor_id` durch die eigene ID ersetzen. Die Seiten wechseln
-alle 5 Sekunden. Die Kopfzeile zeigt das Alter des letzten eigenen Pakets, auf der
+alle 5 Sekunden. Icons stammen aus Material Design Icons. Die Kopfzeile zeigt das Alter des letzten eigenen Pakets, auf der
 Umgebungsseite die Anzahl der gemittelten Stationen. Fehlende Werte erscheinen als `--`.
 
 | Klima | Wind | Regen und Licht |
@@ -135,7 +135,7 @@ Umgebungsseite die Anzahl der gemittelten Stationen. Fehlende Werte erscheinen a
 | ![Seite Umgebung](docs/oled/umgebung.png) | ![Seite Status](docs/oled/status.png) |
 
 Die Bilder sind mit Beispielwerten gerendert, keine Fotos. Neu erzeugen:
-`python docs/render_oled_pages.py Roboto-Regular.ttf docs/oled`
+`python docs/render_oled_pages.py Roboto-Regular.ttf materialdesignicons-webfont.ttf docs/oled`
 
 ## Radio und Pins
 
